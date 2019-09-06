@@ -1,0 +1,19 @@
+{
+  "name": "loganbrown.ca",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoganBrownStFX/LoganBrown.ca.git"
+  },
+  "author": "Logan Brown",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LoganBrownStFX/LoganBrown.ca/issues"
+  },
+  "homepage": "https://github.com/LoganBrownStFX/LoganBrown.ca#readme"
+}
