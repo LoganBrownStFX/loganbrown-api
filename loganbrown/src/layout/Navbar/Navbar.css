@@ -1,0 +1,7 @@
+.navbar {
+  opacity: 0;
+  position: absolute;
+}
+.name {
+  opacity: 1;
+}
