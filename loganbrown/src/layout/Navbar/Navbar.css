@@ -8,23 +8,11 @@
   box-shadow: none;
 }
 .link {
-  /* //transform: translateX(-50px); */
+  transition: all 0.8s ease;
   padding: 10px;
   color: #ffffff;
   font-size: 40px;
 }
 .link:hover {
-  transform: translateX(-50px);
-  animation: slide-left;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-}
-
-@keyframes slide-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50px);
-  }
+  transform: scale(0.7);
 }
