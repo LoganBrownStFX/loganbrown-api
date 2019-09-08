@@ -1,8 +1,15 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 .App {
   text-align: center;
-  height: 100vh;
   font-size: 1em;
-  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
 }
 div {
   height: 100%;

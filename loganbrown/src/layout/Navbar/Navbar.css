@@ -1,7 +1,30 @@
 .navbar {
-  opacity: 0;
+  background: transparent;
   position: absolute;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 75px;
+  box-shadow: none;
 }
-.name {
-  opacity: 1;
+.link {
+  /* //transform: translateX(-50px); */
+  padding: 10px;
+  color: #ffffff;
+  font-size: 40px;
+}
+.link:hover {
+  transform: translateX(-50px);
+  animation: slide-left;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50px);
+  }
 }
