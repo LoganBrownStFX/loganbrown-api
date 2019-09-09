@@ -10,6 +10,8 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "loganbrown", "build", "index.html"));
   });
+
+  app.get("/", (req, res) => res.json({success: "success"}))
 }
 
 app.listen(port, () => console.log(`Example app listening on port ${port}`));
