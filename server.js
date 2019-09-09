@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
 
+const github = require("./api/githubRoutes");
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -11,7 +13,9 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "loganbrown", "build", "index.html"));
   });
 
-  app.get("/", (req, res) => res.json({success: "success"}))
 }
+
+app.use("/api/github", github);
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}`));
