@@ -13,7 +13,7 @@ router.get("/test", (req, res) => res.json({ test: "Test" }));
 //Method: GET
 //Desc: Get list of repos from github
 router.get(routes.GET_REPOS.ENDPOINT, async (req, res) => {
-  const repos = await githubService.getRepos(userName);
+  //const repos = await githubService.getRepos(userName);
 
   res.json({ repos });
 });
