@@ -1,14 +1,21 @@
 const express = require("express");
 const router = express.Router();
+const githubService = require("../services/githubService");
 
 const config = require("../config/config");
 
-routes = config.ROUTES.GITHUB;
+const routes = config.ROUTES.GITHUB;
+const userName = config.CONSTATNS.USERNAME;
 
-router.get('/test', (req, res) => res.json({test: "Test"}));
+router.get("/test", (req, res) => res.json({ test: "Test" }));
 
-console.log(routes.GET_REPOS.ENDPOINT);
-//Get github repos from profile
-router[routes.GET_REPOS](routes.GET_REPOS.ENDPOINT, (req, res) => res.json ({getRepos: "get_repos"}));
+//Route: "/repos"
+//Method: GET
+//Desc: Get list of repos from github
+router.get(routes.GET_REPOS.ENDPOINT, async (req, res) => {
+  const repos = await githubService.getRepos(userName);
+
+  res.json({ repos });
+});
 
 module.exports = router;
