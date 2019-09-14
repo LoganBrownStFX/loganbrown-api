@@ -3,7 +3,17 @@ const config = {
     GITHUB: {
       GET_REPOS: {
         ENDPOINT: "/repos",
-        METHOD: "GET"
+        METHOD: "get"
+      }
+    },
+    EDUCATION: {
+      ADD_EDUCATION: {
+        ENDPOINT: "/add",
+        METHOD: "post"
+      },
+      GET_EDUCATION: {
+        ENDPOINT: "/",
+        METHOD: "get"
       }
     }
   },
@@ -12,6 +22,10 @@ const config = {
       GITHUB: "https://api.github.com/"
     },
     USERNAME: "loganbrownstfx"
+  },
+  DB: {
+    CONNECTION_STRING:
+      "mongodb+srv://admin:admin@cluster0-vzxp1.mongodb.net/test?retryWrites=true&w=majority"
   }
 };
 
