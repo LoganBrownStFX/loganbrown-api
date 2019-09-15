@@ -3,11 +3,12 @@ import { getEducationCall } from "../../services/apiService";
 
 export function getEducation() {
   return async dispatch => {
+    dispatch(educationLoading());
     try {
       const res = await getEducationCall();
       dispatch({
         type: GET_EDUCATION,
-        payload: res.data
+        payload: res.data.education
       });
     } catch (e) {
       dispatch({

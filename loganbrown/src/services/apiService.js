@@ -4,7 +4,7 @@ import config from "../constants/config";
 const apiUrl = config.API_URL;
 export async function getEducationCall() {
   try {
-    let educationObj = await axios.get("/api/education/");
+    let educationObj = await axios.get("/education/");
     return educationObj;
   } catch (e) {
     return {

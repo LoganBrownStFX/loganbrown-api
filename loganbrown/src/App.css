@@ -18,6 +18,9 @@ body {
 div {
   height: 100%;
 }
+span {
+  color: white;
+}
 .flex-container-row {
   display: flex;
   flex-direction: row;

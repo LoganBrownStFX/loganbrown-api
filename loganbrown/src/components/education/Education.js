@@ -3,15 +3,26 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getEducation } from "../../redux/actions/educationActions";
 
+import BasicCard from "../../layout/BasicCard/BasicCard";
+import Spinner from "../Common/Spinner";
+
 class Education extends Component {
   componentDidMount() {
     this.props.getEducation();
   }
+
   render() {
     const { education } = this.props;
+    let educationContent;
+    console.log(education);
+    if (education.loading) {
+      educationContent = <Spinner />;
+    } else {
+      educationContent = <span>test</span>;
+    }
     return (
       <div className="flex-container-column flex-center">
-        <span>{education.issuer}</span>
+        <BasicCard>{educationContent}</BasicCard>
       </div>
     );
   }

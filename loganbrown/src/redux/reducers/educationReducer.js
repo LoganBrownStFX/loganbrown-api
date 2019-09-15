@@ -16,7 +16,8 @@ export default function(state = initialState, action) {
     case GET_EDUCATION:
       return {
         ...state,
-        education: action.payload
+        education: action.payload,
+        loading: false
       };
     default:
       return {
