@@ -18,7 +18,7 @@ class Education extends Component {
     if (education.loading) {
       educationContent = <Spinner />;
     } else {
-      educationContent = <span>Education</span>;
+      educationContent = <span>{education.education.length}</span>;
     }
     return (
       <div className="flex-container-column flex-center">
