@@ -7,7 +7,7 @@
     "devServer": "nodemon server.js",
     "dev": "concurrently \"npm run devServer\" \"npm start --prefix loganbrown\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix loganbrown && npm run build --prefix loganbrown"
+    "heroku-postbuild": "npm start"
   },
   "repository": {
     "type": "git",
