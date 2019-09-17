@@ -3,6 +3,8 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
+const db_string = require("./db");
+
 const config = require("./config/config");
 const github = require("./api/githubRoutes");
 const education = require("./api/educationRoutes");
@@ -12,8 +14,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const port = process.env.PORT || 5000;
 
+const connectToDB = process.env.MONGODB_URI || db_string;
+
 mongoose
-  .connect(process.env.MONGODB_URI, {
+  .connect(connectToDB, {
     useNewUrlParser: true
   })
   .then(() => console.log("DB Connected"))
