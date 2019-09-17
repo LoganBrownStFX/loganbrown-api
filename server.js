@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const db_string = require("./db");
+//const db_string = require("./db");
 
 const config = require("./config/config");
 const github = require("./api/githubRoutes");
