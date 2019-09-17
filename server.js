@@ -23,6 +23,7 @@ mongoose
   .then(() => console.log("DB Connected"))
   .catch(e => console.log(e.message));
 
+app.get("/", (req, res) => res.json({ hello: "hello" }));
 app.use("/api/github", github);
 app.use("/api/education", education);
 
