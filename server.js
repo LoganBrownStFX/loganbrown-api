@@ -3,7 +3,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
-const db_string = require("./db");
+//const db_string = require("./db");
 
 const config = require("./config/config");
 const github = require("./api/githubRoutes");
