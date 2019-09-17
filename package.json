@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LoganBrownStFX/LoganBrown.ca.git"
+    "url": "git+https://github.com/LoganBrownStFX/loganbrown-api.git"
   },
   "author": "Logan Brown",
   "license": "MIT",

@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 5000;
 
 mongoose
-  .connect(config.DB.CONNECTION_STRING, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true
   })
   .then(() => console.log("DB Connected"))
