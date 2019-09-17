@@ -16,7 +16,7 @@ mongoose
   .connect(config.DB.CONNECTION_STRING, {
     useNewUrlParser: true
   })
-  .then(console.log("DB Connected"))
+  .then(() => console.log("DB Connected"))
   .catch(e => console.log(e.message));
 
 app.use("/api/github", github);
