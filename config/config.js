@@ -15,6 +15,16 @@ const config = {
         ENDPOINT: "/",
         METHOD: "get"
       }
+    },
+    EXPERIENCE: {
+      ADD_EXPERIENCE: {
+        ENDPOINT: "/add",
+        METHOD: "post"
+      },
+      GET_EXPERIENCE: {
+        ENDPOINT: "/",
+        METHOD: "get"
+      }
     }
   },
   CONSTATNS: {
