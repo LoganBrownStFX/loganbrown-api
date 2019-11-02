@@ -7,7 +7,7 @@ module.exports = {
       return experienceList;
     } catch (e) {
       console.log("No education Found");
-      return {};
+      return { error: e.message };
     }
   },
   addExperience: async function(data) {
@@ -23,7 +23,7 @@ module.exports = {
       return await newExperience.save();
     } catch (e) {
       console.log(e.message);
-      return {};
+      return { error: e.message };
     }
   }
 };

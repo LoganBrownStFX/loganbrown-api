@@ -8,7 +8,7 @@ module.exports = {
       return educationList;
     } catch (e) {
       console.log("No Education Found");
-      return {};
+      return { error: e.message };
     }
   },
   addEducation: async function(data) {
@@ -24,7 +24,7 @@ module.exports = {
       return await newEducation.save();
     } catch (e) {
       console.log(e.message);
-      return {};
+      return { error: e.message };
     }
   }
 };

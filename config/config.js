@@ -25,6 +25,16 @@ const config = {
         ENDPOINT: "/",
         METHOD: "get"
       }
+    },
+    SKILL: {
+      ADD_SKILL: {
+        ENDPOINT: "/add",
+        METHOD: "post"
+      },
+      GET_SKILL: {
+        ENDPOINT: "/",
+        METHOD: "get"
+      }
     }
   },
   CONSTATNS: {
