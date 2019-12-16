@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const config = require("../config/config");
-const ExperienceDAO = require("../models/ExperienceDAO");
+const ExperienceDAO = require("../models/dao/ExperienceDAO");
 
 const routes = config.ROUTES.EXPERIENCE;
 

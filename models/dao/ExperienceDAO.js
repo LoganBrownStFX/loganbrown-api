@@ -1,4 +1,4 @@
-const Experience = require("./Experience");
+const Experience = require("../Experience");
 
 module.exports = {
   getExperience: async function() {

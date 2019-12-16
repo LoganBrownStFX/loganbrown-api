@@ -4,7 +4,7 @@ const router = express.Router();
 const config = require("../config/config");
 
 const routes = config.ROUTES.EDUCATION;
-const educationDAO = require("../models/EducationDAO");
+const educationDAO = require("../models/dao/EducationDAO");
 
 router[routes.ADD_EDUCATION.METHOD](
   routes.ADD_EDUCATION.ENDPOINT,

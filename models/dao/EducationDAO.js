@@ -1,4 +1,4 @@
-const Education = require("./Education");
+const Education = require("../Education");
 const mongoose = require("mongoose");
 
 module.exports = {

@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const config = require("../config/config");
-const SkillDAO = require("../models/SkillDAO");
+const SkillDAO = require("../models/dao/SkillDAO");
 
 const routes = config.ROUTES.SKILL;
 
@@ -23,5 +23,10 @@ router[routes.GET_SKILL.METHOD](routes.GET_SKILL.ENDPOINT, async (req, res) => {
     console.log(e);
   }
 });
+
+
+router[routes.GET_WHO_FIELDS.METHOD](routes.GET_WHO_FIELDS.ENDPOINT, async(req, res) =>{
+  res.json({test: "test"});
+})
 
 module.exports = router;

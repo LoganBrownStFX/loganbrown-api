@@ -1,4 +1,4 @@
-const Skill = require("./Skill");
+const Skill = require("../Skill");
 
 module.exports = {
   addSkill: async function(data) {

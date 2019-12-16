@@ -34,8 +34,16 @@ const config = {
       GET_SKILL: {
         ENDPOINT: "/",
         METHOD: "get"
+      },
+      ADD_WHO_FIELD:{
+        ENDPOINT: "/who/add",
+        METHOD: "post"
+      },
+      GET_WHO_FIELDS:{
+        ENDPOINT: "/who",
+        METHOD: "get"
       }
-    }
+    },
   },
   CONSTATNS: {
     URLS: {
