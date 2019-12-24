@@ -53,7 +53,8 @@ module.exports = class githubService {
       }
       
     }
-
+    
     return formattedCommits;
   }
+
 };

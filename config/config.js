@@ -2,7 +2,7 @@ const config = {
   ROUTES: {
     GITHUB: {
       GET_REPOS: {
-        ENDPOINT: "/repos",
+        ENDPOINT: "/commits",
         METHOD: "get"
       }
     },
