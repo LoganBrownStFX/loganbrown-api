@@ -21,8 +21,10 @@ module.exports = class githubService {
     return await this.getCommits(repoNames);
   }
 
-  async getCommits(repoNames) {
-    let commits = [];
+  
+  async getCommits() {
+    let repoNames = ["loganbrownstfx.github.io", "loganbrown-api"],
+    commits = [];
     for (let i = 0; i < repoNames.length; i++) {
       try {
         commits[i] = await axios.get(
@@ -32,7 +34,26 @@ module.exports = class githubService {
         console.log(err);
       }
     }
+   
+    return this.formatCommits(commits, repoNames);
+  }
 
-    return commits;
+  formatCommits(commits, repoNames){
+    let formattedCommits = [];
+    
+    console.log(commits[1].data[0]);
+
+    for(let i = 0; i < commits.length; i++){
+      for(let j = 0; j < commits[i].data.length; j++){
+        let newCommit = {};
+        newCommit.repo = repoNames[i];
+        newCommit.message = commits[i].data[j].commit.message;
+        newCommit.date = commits[i].data[j].commit.committer.date;
+        formattedCommits.push(newCommit);
+      }
+      
+    }
+
+    return formattedCommits;
   }
 };

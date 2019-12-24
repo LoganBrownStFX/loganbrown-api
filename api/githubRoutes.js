@@ -15,7 +15,12 @@ githubService = new githubService();
 //Method: GET
 //Desc: Get list of repos from github
 router[routes.GET_REPOS.METHOD](routes.GET_REPOS.ENDPOINT, async (req, res) => {
-  const toms = await githubService.getRepos(userName);
-  console.log(toms);
+  try{
+    const commits = await githubService.getCommits();
+    res.json({commits: commits});
+  }catch(e){
+    res.json({error: e.message})
+  }
+ 
 });
 module.exports = router;
