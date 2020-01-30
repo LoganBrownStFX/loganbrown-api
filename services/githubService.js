@@ -40,8 +40,6 @@ module.exports = class githubService {
 
   formatCommits(commits, repoNames){
     let formattedCommits = [];
-    
-    console.log(commits[1].data[0]);
 
     for(let i = 0; i < commits.length; i++){
       for(let j = 0; j < commits[i].data.length; j++){
